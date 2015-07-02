@@ -1,3 +1,4 @@
+RewriteRule  ^(css|fonts|functions|js|media|tpl|vendor)($|/) - [L]
 # To display SVG images
 AddType image/svg+xml svg
 AddType image/svg+xml svgz
