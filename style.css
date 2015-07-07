@@ -160,6 +160,10 @@ img {
   display: block;
 }
 
+.lefttxt{
+  text-align: left;
+}
+
 .centertxt {
   text-align: center;
 }
@@ -2498,6 +2502,53 @@ input.button:active {
   margin-right: 0.667em;
   vertical-align: middle;
   line-height: 1em !important;
+}
+
+.button.primary,
+input.button.primary {
+  background-color: #FAC51C;
+}
+
+.button.primary:hover,
+input.button.primary:hover {
+  background-color: #FAC51C;
+}
+
+.button.secondary,
+input.button.secondary {
+  background-color: #FBA026;
+}
+
+.button.secondary:hover,
+input.button.secondary:hover {
+  background-color: #FBA026;
+}
+.tertiary.tertiary,
+input.tertiary.tertiary {
+  background-color: #F87117;
+}
+
+.button.tertiary:hover,
+input.button.tertiary:hover {
+  background-color: #F87117;
+}
+.button.quaternary,
+input.button.quaternary {
+  background-color: #CF3510;
+}
+
+.button.quaternary:hover,
+input.button.quaternary:hover {
+  background-color: #CF3510;
+}
+.button.quinary,
+input.button.quinary {
+  background-color: #890606;
+}
+
+.button.quinary:hover,
+input.button.quinary:hover {
+  background-color: #890606;
 }
 
 .button.red,
