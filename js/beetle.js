@@ -25,7 +25,7 @@ jQuery(document).ready(function ($) {
         loader = '<div class="landing landing-els"><div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div></div>',
         loaderLightbox = '<div class="landing landing-els lightbox"><div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div></div>',
         darkover = '<div class="darkover"></div>',
-        moreBtnIcon = '<div class="more"><a href="#main"><i class="icon icon-arrow-down"></i></a></div>';
+        moreBtnIcon = '<div class="more"><a href="#tools"><i class="icon icon-arrow-down"></i></a></div>';
 
 
     /* Determine viewport width matching with media queries */
@@ -621,8 +621,8 @@ jQuery(document).ready(function ($) {
         var $this = $('.dribbble-items');
         $this.find('.item:nth-of-type(4n)').addClass('last');
         $this.removeClass('preload');
-        $this.children('.landing-els').remove(); 
-        centerOverlay();           
+        $this.children('.landing-els').remove();
+        centerOverlay();
 
     };
 
@@ -638,9 +638,9 @@ jQuery(document).ready(function ($) {
 
         $(window).load(function() {
 
-            centerOverlay(); 
+            centerOverlay();
 
-        });        
+        });
 
     }
 
@@ -1942,7 +1942,7 @@ jQuery(document).ready(function ($) {
             var infowindow = new google.maps.InfoWindow({
                 content: contentString
             });
-            
+
             google.maps.event.addListener(marker, 'click', function() {
                 infowindow.open(map,marker);
             });
