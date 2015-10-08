@@ -31,18 +31,9 @@
   })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
   </script>
 
-  <!-- Google Analytics Tracking Code for apigarage.com -->
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-65766352-1', 'auto');
-  ga('send', 'pageview');
-  </script>
 </head>
 <body class="page no-parallax">
+
   <header class="fixed-header" style="background-color:#fac51c">
     <div class="row" >
       <div class="nav-inner row-content buffer-left buffer-right even clear-after">
@@ -86,7 +77,7 @@
                     <input class="email plain buffer" style="display:inline; background-color:white;"
                     type="email" name="EMAIL" placeholder="Email address" id="mce-EMAIL"/>
                     <input type="submit" value="Request Early Access" name="subscribe" id="mc-embedded-subscribe" class="plain button tertiary"
-                      onclick="ga('send', 'event', 'subscribe', 'click', 'top-button');">
+                      onclick="goog_report_conversion()">
                   </div>
                 </div>
                 <div id="mce-responses" class="clear">
@@ -163,7 +154,7 @@
                   <input class="email plain buffer" style="display:inline; background-color:white;"
                   type="email" name="EMAIL" placeholder="Email address" id="mce-EMAIL"/>
                   <input type="submit" value="Request Early Accees" name="subscribe" id="mc-embedded-subscribe" class="plain button tertiary"
-                  onclick="ga('send', 'event', 'subscribe', 'click', 'middle-button');">
+                      onclick="goog_report_conversion()">
                 </div>
               </div>
             </div>
@@ -233,7 +224,7 @@
                     <input class="email plain buffer" style="display:inline; background-color:white;"
                     type="email" name="EMAIL" placeholder="Email address" id="mce-EMAIL"/>
                     <input type="submit" value="Request Early Access" name="subscribe" id="mc-embedded-subscribe" class="plain button tertiary"
-                    onclick="ga('send', 'event', 'subscribe', 'click', 'bottom-button');">
+                      onclick="goog_report_conversion()">
                   </div>
                 </div>
               </div>
@@ -277,6 +268,46 @@
   <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
   <script src="js/plugins.js"></script>
   <script src="js/beetle.js"></script>
+  <!-- Google Analytics Tracking Code for page load-->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-65766352-1', 'auto');
+  ga('send', 'pageview');
+  </script>
+  <!-- Google Code for API Garage Landing Page Conversion Page -->
+  <script type="text/javascript"
+    src="//www.googleadservices.com/pagead/conversion_async.js">
+  </script>
+  <script type="text/javascript">
+    /* <![CDATA[ */
+    goog_snippet_vars = function() {
+      var w = window;
+      w.google_conversion_id = 936678214;
+      w.google_conversion_label = "TUxWCLXzq2AQxqbSvgM";
+      w.google_remarketing_only = false;
+    }
+    // DO NOT CHANGE THE CODE BELOW.
+    goog_report_conversion = function(url) {
+      goog_snippet_vars();
+      window.google_conversion_format = "3";
+      window.google_is_call = true;
+      var opt = new Object();
+      opt.onload_callback = function() {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    }
+    var conv_handler = window['google_trackConversion'];
+    if (typeof(conv_handler) == 'function') {
+      conv_handler(opt);
+    }
+  }
+  /* ]]> */
+  </script>
 </body>
 
 </html>
