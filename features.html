@@ -12,7 +12,7 @@
       width: device-width;
     }
   </style>
-  <title>API Garage</title>
+  <title>API Garage Features</title>
 
   <link rel="stylesheet" href="css/semantic.min.css" media="screen">
   <link rel="stylesheet" href="css/font-awesome.min.css" media="screen">
@@ -96,14 +96,10 @@
         $('.ui.sidebar')
           .sidebar('attach events', '.toc.item');
 
-        function showModal() {
-          $(".ui.modal")
-            .modal('show');
-        };
-
-        setTimeout(showModal, 15000);
-
       });
+      // $(".card sponser one").click(function() {
+      //   $(".ui basic modal sponser one").show;
+      // });
   </script>
 </head>
 
@@ -164,41 +160,29 @@
       <div class="ui text container">
         <div class="title">
           <h1 class="ui inverted header">
-            Garage for API Developers
+            Cross Platform Application Built with Web Technologies
           </h1>
         </div>
-        <h2>Tools and Workflows to Improve the API LifeCycle</h2>
-        <div class="ui huge primary button">Getting Started <i class="right arrow icon"></i></div>
-        <div class="ui huge primary button">Try Now <i class="right arrow icon"></i></div>
+        <div class="ui grid">
+          <div class="four wide column center aligned">
+            <img src="screenshot.jpg" />
+          </div>
+        </div>
       </div>
 
     </div>
 
     <div class="ui vertical stripe segment">
       <div class="ui center aligned header">
-        <h3>Developing Tool(s) to Help Developers work through API LifeCycle</h3>
+        <h3>Interactive Console | Accessible Sidebar | Request Activity | Mocking | Team Collaboration</h3>
       </div>
 
-      <div class="ui centered link cards">
-        <div class="card">
-          <div class="image">
-            <img src="path/to/screenshot" />
-          </div>
-          <div class="content">
-            <p>
-              Interactive Cross Platform Frontend
-            </p>
-          </div>
+      <div class="ui grid">
+        <div class="eight wide column">
+          image of the first feature
         </div>
-        <div class="card">
-          <div class="image">
-            <img src="path/to/screenshot" />
-          </div>
-          <div class="content">
-            <p>
-              Backend as a data store for collaboration
-            </p>
-          </div>
+        <div class="eight wide column">
+          Blurb about the first feature
         </div>
       </div>
     </div>
@@ -263,7 +247,7 @@
       </div>
 
       <div class="ui centered link cards">
-        <div class="card sponser one" id="sponser-one">
+        <div class="card sponser one">
           <div class="image">
             <img src="path/to/image" />
           </div>
@@ -273,6 +257,30 @@
             </p>
           </div>
         </div>
+        <!-- <div class="ui basic modal sponser one">
+          <i class="close icon"></i>
+          <div class="header">
+            Sponser One
+          </div>
+          <div class="image content">
+            <div class="image">
+              <i class="archive icon"></i>
+            </div>
+            <div class="description">
+              <p>Blurb about Sponser One</p>
+            </div>
+          </div>
+          <div class="actions">
+            <div class="two fluid ui inverted buttons">
+              <div class="ui red basic inverted button">
+                <i class="remove icon"></i> No
+              </div>
+              <div class="ui green basic inverted button">
+                <i class="checkmark icon"></i> Yes
+              </div>
+            </div>
+          </div>
+        </div> -->
         <div class="card">
           <div class="image">
             <img src="path/to/image" />
@@ -295,17 +303,6 @@
         </div>
       </div>
       <br/>
-
-      <div class="ui modal">
-        <i class="close icon"></i>
-        <div class="header">
-          Check Out Our Sponsers
-        </div>
-        <div class="content">
-          We think they're awesome. We hope you do too
-        </div>
-      </div>
-
 
     </div>
 
