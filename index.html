@@ -109,36 +109,6 @@
 
 <body>
 
-  <!-- Following Menu -->
-  <div class="ui large top fixed hidden menu">
-    <div class="ui container">
-      <a class="active item">Home</a>
-      <a class="item">Work</a>
-      <a class="item">Company</a>
-      <a class="item">Careers</a>
-      <!-- Do I need any of this? -->
-      <!-- <div class="right menu">
-      <div class="item">
-        <a class="ui button">Log in</a>
-      </div>
-      <div class="item">
-        <a class="ui primary button">Sign Up</a>
-      </div>
-    </div> -->
-    </div>
-  </div>
-
-  <!-- Sidebar Menu -->
-  <div class="ui vertical inverted sidebar menu">
-    <a class="active item">Home</a>
-    <a class="item">Work</a>
-    <a class="item">Company</a>
-    <a class="item">Careers</a>
-    <a class="item">Login</a>
-    <a class="item">Signup</a>
-  </div>
-
-
   <!-- Page Contents -->
   <div class="pusher">
     <div class="ui inverted vertical masthead center aligned segment">
@@ -148,6 +118,10 @@
           <a class="toc item">
             <i class="sidebar icon"></i>
           </a>
+          <div class="left item">
+            <a class="logo" href="/"><img class="logo" src="img/ms-icon-70x70.png" /></a>
+            <a>API Garage</a>
+          </div>
           <div class="right item">
             <a class="nonButtonNav" href="/features.html">Features</a>
             <a class="nonButtonNav" href="http://github.com">Github</a>
@@ -190,8 +164,8 @@
         </div>
         <div class="card">
           <div class="center aligned icon">
-            <!-- TODO: Why is this misbehaving? -->
-            <i class="fa fa-database fa-4x"></i>
+            <!-- Used reorder because database & server didn't work. This was the most similar image -->
+            <i class="fa fa-reorder fa-4x"></i>
           </div>
           <div class="content">
             <p>
@@ -297,14 +271,13 @@
       <br/>
 
       <div class="ui huge modal">
-        <!-- TODO: Do we need a close icon if the user can just click away? -->
         <div class="ui center aligned header">
           <h3>Our Sponsers</h3>
         </div>
         <br />
 
         <div class="ui centered link cards">
-          <div class="card sponser one">
+          <div class="card sponserCard">
             <div class="image">
               <!-- <img src="path/to/image" /> -->
             </div>
@@ -314,7 +287,7 @@
               </p>
             </div>
           </div>
-          <div class="card">
+          <div class="card sponserCard">
             <div class="image">
               <!-- <img src="path/to/image" /> -->
             </div>
@@ -324,7 +297,7 @@
               </p>
             </div>
           </div>
-          <div class="card">
+          <div class="card sponserCard">
             <div class="image">
               <!-- <img src="path/to/image" /> -->
             </div>
