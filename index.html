@@ -148,14 +148,10 @@
           <a class="toc item">
             <i class="sidebar icon"></i>
           </a>
-          <a class="active item">Home</a>
-          <a class="item">Work</a>
-          <a class="item">Company</a>
-          <a class="item">Careers</a>
           <div class="right item">
-            <a class="ui inverted button" href="/features.html">Features</a>
-            <a class="ui inverted button">Github</a>
-            <a class="ui inverted button">Getting Started</a>
+            <a class="nonButtonNav" href="/features.html">Features</a>
+            <a class="nonButtonNav" href="http://github.com">Github</a>
+            <a class="nonButtonNav" >Getting Started</a>
             <a class="ui inverted button">Donate</a>
           </div>
         </div>
@@ -168,8 +164,8 @@
           </h1>
         </div>
         <h2>Tools and Workflows to Improve the API LifeCycle</h2>
-        <div class="ui huge primary button">Getting Started <i class="right arrow icon"></i></div>
-        <div class="ui huge primary button">Try Now <i class="right arrow icon"></i></div>
+        <div class="ui huge primary button">Getting Started </div>
+        <div class="ui huge primary button">Try Now </div>
       </div>
 
     </div>
@@ -181,8 +177,10 @@
 
       <div class="ui centered link cards">
         <div class="card">
-          <div class="image">
-            <img src="path/to/screenshot" />
+          <div class="center aligned icons">
+            <i class="fa fa-linux fa-3x"></i>
+            <i class="fa fa-apple fa-3x"></i>
+            <i class="fa fa-windows fa-3x"></i>
           </div>
           <div class="content">
             <p>
@@ -191,8 +189,9 @@
           </div>
         </div>
         <div class="card">
-          <div class="image">
-            <img src="path/to/screenshot" />
+          <div class="center aligned icon">
+            <!-- TODO: Why is this misbehaving? -->
+            <i class="fa fa-database fa-4x"></i>
           </div>
           <div class="content">
             <p>
@@ -212,8 +211,8 @@
 
       <div class="ui centered link cards">
         <div class="card">
-          <div class="image">
-            <img src="path/to/image" />
+          <div class="center aligned icon">
+            <img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-design.png" height=60 width=60 />
           </div>
           <div class="content">
             <p>
@@ -222,8 +221,8 @@
           </div>
         </div>
         <div class="card">
-          <div class="image">
-            <img src="path/to/image" />
+          <div class="center aligned icon">
+            <i class="fa fa-book fa-4x"></i>
           </div>
           <div class="content">
             <p>
@@ -232,23 +231,24 @@
           </div>
         </div>
         <div class="card">
-          <div class="image">
-            <img src="path/to/image" />
+          <div class="center aligned icon">
+            <i class="fa fa-bug fa-4x"></i>
           </div>
           <div class="content">
             <p>
-              Mocking
+              Debugging
             </p>
           </div>
         </div>
-        <a class="ui card" href="/features">
+
+        <div class="ui card" href="/features.html">
           <div class="image">
-            <img src="path/to/image" />
+            <!-- <img src="path/to/image" /> -->
           </div>
           <div class="content">
-            <p>
+            <a class="header" href="/features.html">
               And More
-            </p>
+            </a class="header" href="/features.html">
           </div>
         </a>
       </div>
@@ -263,9 +263,9 @@
       </div>
 
       <div class="ui centered link cards">
-        <div class="card sponser one" id="sponser-one">
+        <div class="card sponser one">
           <div class="image">
-            <img src="path/to/image" />
+            <!-- <img src="path/to/image" /> -->
           </div>
           <div class="content">
             <p>
@@ -275,7 +275,7 @@
         </div>
         <div class="card">
           <div class="image">
-            <img src="path/to/image" />
+            <!-- <img src="path/to/image" /> -->
           </div>
           <div class="content">
             <p>
@@ -285,7 +285,7 @@
         </div>
         <div class="card">
           <div class="image">
-            <img src="path/to/image" />
+            <!-- <img src="path/to/image" /> -->
           </div>
           <div class="content">
             <p>
@@ -296,14 +296,46 @@
       </div>
       <br/>
 
-      <div class="ui modal">
-        <i class="close icon"></i>
-        <div class="header">
-          Check Out Our Sponsers
+      <div class="ui huge modal">
+        <!-- TODO: Do we need a close icon if the user can just click away? -->
+        <div class="ui center aligned header">
+          <h3>Our Sponsers</h3>
         </div>
-        <div class="content">
-          We think they're awesome. We hope you do too
+        <br />
+
+        <div class="ui centered link cards">
+          <div class="card sponser one">
+            <div class="image">
+              <!-- <img src="path/to/image" /> -->
+            </div>
+            <div class="content">
+              <p>
+                Sponser One
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image">
+              <!-- <img src="path/to/image" /> -->
+            </div>
+            <div class="content">
+              <p>
+                Sponser Two
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image">
+              <!-- <img src="path/to/image" /> -->
+            </div>
+            <div class="content">
+              <p>
+                This could be you
+              </p>
+            </div>
+          </div>
         </div>
+        <br />
       </div>
 
 
@@ -317,7 +349,8 @@
             <h4 class="ui inverted header">About</h4>
             <div class="ui inverted link list">
               <a href="#" class="item">Sitemap</a>
-              <a href="#" class="item">Contact Us</a>
+              <!--TODO make this open up an email client so user can email API Garage  -->
+              <a href="mailto:info@apigarage.com" class="item">Contact Us</a>
             </div>
           </div>
         </div>
