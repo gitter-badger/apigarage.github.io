@@ -1,6 +1,31 @@
 .logo {
   padding-right: 0.5em;
 }
+
+.feature-column {
+  margin: auto;
+  height: 600px;
+  width: 600px;
+}
+
+.image {
+  margin: auto;
+  max-height: 550px;
+  max-width: 550px;
+}
+
+.jumbotron {
+  margin: 10px;
+  max-height: 800px;
+  max-width: 800px
+}
+
+.app-image {
+  margin: auto;
+  max-height: 775px;
+  max-width: 775px;
+}
+
 .ag-title {
   max-width: 900px!important
   margin: auto;
