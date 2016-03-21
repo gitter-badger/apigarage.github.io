@@ -101,7 +101,7 @@
             .modal('show');
         };
 
-        setTimeout(showModal, 15000);
+        // setTimeout(showModal, 15000);
 
       });
   </script>
@@ -115,34 +115,31 @@
 
       <div class="ui container">
         <div class="ui large secondary inverted pointing menu">
-          <a class="toc item">
-            <i class="sidebar icon"></i>
-          </a>
           <div class="left item">
             <a class="logo" href="/"><img class="logo" src="img/favicon-32x32.png" /></a>
             <h2 class="logo-text" href="/">API Garage</h2>
           </div>
           <div class="right item">
-            <a class="nonButtonNav" href="/features.html">Features</a>
-            <a class="nonButtonNav" href="http://github.com">Github</a>
-            <a class="nonButtonNav" >Getting Started</a>
+            <a class="item" >Getting Started</a>
+            <a class="item" href="/features.html">Features</a>
+            <a class="item" href="http://github.com">Github</a>
             <a class="ui inverted button">Donate</a>
           </div>
         </div>
       </div>
 
-        <div class="ui text ag-title">
-            <h1 class="ui text container inverted header">
-              Garage for API Developers
-            </h1>
-          <h2>Tools and Workflows to Improve the API LifeCycle</h2>
-          <a class="ui huge primary button" href="/get-started.html">
-             <i class="fa fa-play"></i> &nbsp Get Started
-          </a>
-          <a class="ui huge primary button" href="https://github.com">
-            <i class="fa fa-github"></i> &nbsp Checkout Github
-          </a>
-        </div>
+      <div class="ui text ag-title">
+        <h1 class="ui text container inverted header">
+          Garage for API Developers
+        </h1>
+        <h2>Tools and Workflows to Improve the API LifeCycle</h2>
+        <a class="ui huge primary button" href="/get-started.html">
+          <i class="fa fa-play"></i> &nbsp Get Started
+        </a>
+        <a class="ui huge primary button" href="https://github.com">
+          <i class="fa fa-github"></i> &nbsp Checkout Github
+        </a>
+      </div>
     </div>
 
     <div class="ui stripe  vertical segment">
@@ -154,11 +151,13 @@
               <i class="fa fa-apple fa-x"></i>
               <i class="fa fa-windows fa-x"></i>
             </div>
-            Crotss Platform Frontend
+            Cross Platform Frontend
           </h1>
-          <p>Build on top of Electron. HTML5, CSS, JS. </p>
-          <p> is </p>
-          <p></p>
+          <p>
+            Intuitive frontend to easily <b>document and consume APIs</b> using
+            tools like <b>interactive console, environments, and mocking </b> .
+            The cross frontend is built on top of latest web technologies using ElectronJS.
+          </p>
           <div class="ui large source button" style="display:none;">
             <i class="docs code icon"></i> View Source
           </div>
@@ -168,10 +167,14 @@
         </div>
         <div class="center aligned column">
           <h1 class="ui icon header">
-            <img src="/images/icons/theming.png" class="ui icon image">
+            <div heightclass="center aligned icon">
+              <img style="height: 100px;" src="/img/server.svg" class="ui icon image">
+            </div>
             Collaborative Backend
           </h1>
-          <p> Build in Laravel PHP makes it super easy to modify and get started with the code</p>
+          <p>
+            Backend is a simple data store and supports team collaboration. It's build in Laravel PHP, which makes it super easy to modify and add features.
+          </p>
           <div class="ui large source button" style="display:none;">
             <i class="docs code icon"></i> View Source
           </div>
@@ -216,7 +219,7 @@
             <h2 class="ui icon header">
               <i class="fa fa-group fa-3x"></i> <br> <br>
               Team Collaboration
-              </h2>
+            </h2>
             <p>
               Semantic UI is a <b>free open source</b> project already used in multiple <a href="http://www.quirky.com" target="_blank">large</a> scale <a href="http://www.newrepublic.com" target="_blank">production</a> environments.
             </p>
@@ -228,7 +231,7 @@
     <!-- End : Features -->
 
 
-    <div class="ui vertical stripe quote segment">
+    <!-- <div class="ui vertical stripe quote segment">
       <br />
       <div class="ui center aligned header">
         <h3>Our Sponsers</h3>
@@ -237,7 +240,6 @@
       <div class="ui centered link cards">
         <div class="card sponser one">
           <div class="image">
-            <!-- <img src="path/to/image" /> -->
           </div>
           <div class="content">
             <p>
@@ -247,7 +249,6 @@
         </div>
         <div class="card">
           <div class="image">
-            <!-- <img src="path/to/image" /> -->
           </div>
           <div class="content">
             <p>
@@ -257,7 +258,6 @@
         </div>
         <div class="card">
           <div class="image">
-            <!-- <img src="path/to/image" /> -->
           </div>
           <div class="content">
             <p>
@@ -265,7 +265,7 @@
             </p>
           </div>
         </div>
-      </div>
+      </div> -->
       <br/>
 
       <div class="ui huge modal">
@@ -308,8 +308,6 @@
         </div>
         <br />
       </div>
-
-
     </div>
 
 
@@ -317,9 +315,9 @@
       <div class="ui container">
         <div class="ui stackable inverted divided equal height stackable grid">
           <div class="three wide column">
-            <h4 class="ui inverted header">About</h4>
+            <!-- <h4 class="ui inverted header">About</h4> -->
             <div class="ui inverted link list">
-              <a href="#" class="item">Sitemap</a>
+              <!-- <a href="#" class="item">Sitemap</a> -->
               <!--TODO make this open up an email client so user can email API Garage  -->
               <a href="mailto:info@apigarage.com" class="item">Contact Us</a>
             </div>

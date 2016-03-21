@@ -12,7 +12,7 @@
       width: device-width;
     }
   </style>
-  <title>API Garage Features</title>
+  <title>API Garage</title>
 
   <link rel="stylesheet" href="css/semantic.min.css" media="screen">
   <link rel="stylesheet" href="css/font-awesome.min.css" media="screen">
@@ -96,45 +96,44 @@
         $('.ui.sidebar')
           .sidebar('attach events', '.toc.item');
 
+        function showModal() {
+          $(".ui.modal")
+            .modal('show');
+        };
+
+        // setTimeout(showModal, 15000);
+
       });
-    // $(".card sponser one").click(function() {
-    //   $(".ui basic modal sponser one").show;
-    // });
   </script>
 </head>
 
 <body>
 
   <!-- Page Contents -->
-  <div class="ui inverted vertical masthead segment">
-    <div class="ui container">
-      <div class="ui centre aligned large secondary inverted pointing menu">
-        <div class="left item">
-          <a class="logo" href="/"><img class="logo" src="img/favicon-32x32.png" /></a>
-          <a>API Garage</a>
-        </div>
-        <div class="right item">
-          <a class="nonButtonNav" href="/features.html">Features</a>
-          <a class="nonButtonNav">Github</a>
-          <a class="nonButtonNav">Getting Started</a>
-          <a class="ui inverted button">Donate</a>
+  <div class="pusher">
+    <div class="ui inverted vertical center aligned segment">
+
+      <div class="ui container">
+        <div class="ui large secondary inverted pointing menu">
+          <div class="left item">
+            <a class="logo" href="/"><img class="logo" src="img/favicon-32x32.png" /></a>
+            <h2 class="logo-text" href="/">API Garage</h2>
+          </div>
+          <div class="right item">
+            <a class="item" >Getting Started</a>
+            <a class="active item" href="/features.html">Features</a>
+            <a class="item" href="http://github.com">Github</a>
+            <a class="ui inverted button">Donate</a>
+          </div>
         </div>
       </div>
-    </div>
-
-    <div class="ui center aligned text container">
-      <h1 class="ui inverted header">
-        Cross Platform Application Made with Web Technlogies
-      </h1>
-    </div>
-    <div class="ui center aligned container jumbotron">
-      <img class="app-image" src="/img/APIGarageScreenshots/api_garage_application.png"/>
-    </div>
-
   </div>
 
-  <div class="ui container center aligned" >
-    <div class="features-navbar">
+
+  <br/>
+  <div class="ui vertical stripe segment">
+
+    <!-- <div class="ui container features-navbar">
       <div class="ui compact menu">
         <a class="item" href="#interactiveConsole">Interactive Console</a>
         <a class="item" href="#accessibleSidebar">Accessible Sidebar</a>
@@ -142,56 +141,124 @@
         <a class="item" href="#mocking">Mocking</a>
         <a class="item" href="#teamCollaboration">Team Collaboration</a>
       </div>
-    </div>
-  </div>
+    </div> -->
 
-  <div class="ui grid">
-    <div class="eight wide column center aligned feature-column" id="interactiveConsole">
+    <div class="ui middle aligned stackable grid container">
+      <div class="row">
+        <div class="six wide column">
+          <h3 class="ui header">Interactive Console</h3>
+          <p>Interactive Console makes it super simple for consumers to get started with the API. Consumer can start playing with the endpoint with a simple click.</p>
+          <h3 class="ui header">Response Viewer</h3>
+          <p>Consumer can view the formatted response, right there in the window. They can collapse/expand the JSON objects and search a keyword.</p>
+        </div>
+        <div class="ten wide right floated column">
+          <img class="ui bordered image" src="/img/APIGarageScreenshots/interactive_console.png"  />
+        </div>
+      </div>
+    </div>
+
+    <div class="ui middle aligned stackable grid container">
+      <div class="row">
+        <div class="six wide column">
+          <h3 class="ui header">Environments</h3>
+          <p>Environments allows developers to use the same endpoint with different hosts. Simply point to the right server.</p>
+          <h3 class="ui header">Public and Private Environments</h3>
+          <p>Using public and private environments developers can decide which environments to share share which environments to not share.</p>
+        </div>
+        <div class="ten wide right floated column">
+          <img class="ui bordered image" src="/img/APIGarageScreenshots/environments.png"  />
+        </div>
+      </div>
+    </div>
+
+    <div class="ui middle aligned stackable grid container">
+      <div class="row">
+        <div class="six wide column">
+          <h3 class="ui header">Mocking</h3>
+          <p>When backend is not ready, frontend development is blocked. To use this fetaure, developer have to document the expected response for the endpoint. When documented, just start the server, and frontend is unblocked. </p>
+        </div>
+        <div class="ten wide right floated column">
+          <img class="ui bordered image" src="/img/APIGarageScreenshots/mocking.png"  />
+        </div>
+      </div>
+    </div>
+
+    <div class="ui middle aligned stackable grid container">
+      <div class="row">
+        <div class="six wide column">
+          <h3 class="ui header">Endpoint Activity</h3>
+          <p>Don't forget to document your endpoint changelog. In addition, Flag an endpoint when something is wrong with it and notify the stakeholders.</p>
+        </div>
+        <div class="ten wide right floated column">
+          <img class="ui bordered image" src="/img/APIGarageScreenshots/mocking.png"  />
+        </div>
+      </div>
+    </div>
+
+    <div class="ui middle aligned stackable grid container">
+      <div class="row">
+        <div class="six wide column">
+          <h3 class="ui header">Team Collaboration</h3>
+          <p>Share your documentation with your entire team. They can also edit and contribute to the docs. </p>
+        </div>
+        <div class="ten wide right floated column">
+          <img class="ui bordered image" src="/img/APIGarageScreenshots/team_collaboration.png"  />
+        </div>
+      </div>
+    </div>
+
+  </div>
+    <!-- <div class="ui grid">
+      <div class="twelve wide column center aligned feature-column" id="interactiveConsole">
       <img class="image" src="/img/APIGarageScreenshots/interactive_console.png"  />
-    </div>
-    <div class="eight wide column center aligned feature-column">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-      in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </div>
-    <div class="eight wide column center aligned feature-column">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-      in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </div>
-    <div class="eight wide column center aligned feature-column" id="accessibleSidebar">
-      <img class="image" src="/img/APIGarageScreenshots/Accessible_sidebar.png"/>
-    </div>
-    <div class="eight wide column center aligned feature-column" id="requestActivity">
-      <img class="image" src="/img/APIGarageScreenshots/request_activity.png" />
-    </div>
-    <div class="eight wide column center aligned feature-column">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-      in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </div>
-    <div class="eight wide column center aligned feature-column">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-      in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </div>
-    <div class="eight wide column center aligned feature-column" id="mocking">
-      <img class="image" src="/img/APIGarageScreenshots/mocking_server.png" />
-    </div>
-    <div class="eight wide column center aligned feature-column" id="teamCollaboration">
-      <img class="image" src="/img/APIGarageScreenshots/team_collaboration.png" />
-    </div>
-    <div class="eight wide column center aligned feature-column">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-      in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </div>
-  </div>
-  <br />
+      </div>
+      <div class="four wide column center aligned feature-column">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </div>
+      <div class="eight wide column center aligned feature-column">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </div>
+      <div class="eight wide column center aligned feature-column" id="accessibleSidebar">
+        <img class="image" src="/img/APIGarageScreenshots/Accessible_sidebar.png"/>
+      </div>
+      <div class="eight wide column center aligned feature-column" id="requestActivity">
+        <img class="image" src="/img/APIGarageScreenshots/request_activity.png" />
+      </div>
+      <div class="eight wide column center aligned feature-column">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </div>
+      <div class="eight wide column center aligned feature-column">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </div>
+      <div class="eight wide column center aligned feature-column" id="mocking">
+        <img class="image" src="/img/APIGarageScreenshots/mocking_server.png" />
+      </div>
+      <div class="eight wide column center aligned feature-column" id="teamCollaboration">
+        <img class="image" src="/img/APIGarageScreenshots/team_collaboration.png" />
+      </div>
+      <div class="eight wide column center aligned feature-column">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </div>
+    </div> -->
 
-  <div class="ui inverted vertical footer segment">
-    <div class="ui container">
-      <div class="ui stackable inverted divided equal height stackable grid">
-        <div class="three wide column">
-          <h4 class="ui inverted header">About</h4>
-          <div class="ui inverted link list">
-            <a href="#" class="item">Sitemap</a>
-            <a href="#" class="item">Contact Us</a>
+  </div>
+
+  <div>
+    <div class="ui inverted vertical footer segment">
+      <div class="ui container">
+        <div class="ui stackable inverted divided equal height stackable grid">
+          <div class="three wide column">
+            <!-- <h4 class="ui inverted header">About</h4> -->
+            <div class="ui inverted link list">
+              <!-- <a href="#" class="item">Sitemap</a> -->
+              <!--TODO make this open up an email client so user can email API Garage  -->
+              <a href="mailto:info@apigarage.com" class="item">Contact Us</a>
+            </div>
           </div>
         </div>
       </div>
