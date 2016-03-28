@@ -132,7 +132,8 @@
   <div>
     <div class="main ui intro container">
       <div class="no example">
-        <h1 class="ui header">Setting Up</h1>
+        <br/> <br/>
+        <h1 class="ui header">Getting Started</h1>
 
         <p>
           API Garage is a two part software: 1) Backend for persisting the information and 2) a cross platform
@@ -140,11 +141,10 @@
         </p>
 
         <div id="backend">
-          <h2 class="ui dividing header">Setting up Backend</h2>
+          <h2 class="ui dividing header">Setting up the backend</h2>
           <div class="ui container">
             <h3 class="ui header">Setting Up LAMP Stack</h3>
 
-            <div>
               <p>
                 Easiest way to setup a LAMP stack is to use <code>Tasksel</code>. Tasksel is a LAMP stack utility to install PHP, MySQL, and Apache.
                 Once we have a docker container for API Garage.
@@ -157,9 +157,7 @@
                   </code>
                 </p>
               </div>
-            </div>
 
-            <div>
               <p>
                 Login to MySQL.
               </p>
@@ -171,9 +169,6 @@
                 </p>
               </div>
 
-            </div>
-
-            <div>
               <p>
                 Setup a database and a user.
               </p>
@@ -193,31 +188,167 @@
                   </code>
                 </p>
               </div>
-            </div>
-          </div>
-          <div class="ui container">
-            <h3 class="ui header">Clone Backend Repository</h3>
 
-            <div>
+          <div class="ui container">
+            <h3 class="ui header">Setup The Repository</h3>
+
               <p>
-                Clone the public repository.
+                Backend is written in PHP Larave 4. The repository is located at <a href="https://github.com/apigarage/ag-backend">https://github.com/apigarage/ag-backend</a>.
+                Clone the repository on the server.
               </p>
               <div class="ui existing segment">
                 <p>
                   <code class="code">
-                    $ sudo apt-get install tasksel </br>
-                    $ sudo  tasksel # Select MySQL, PHP, and Apache for installation.
+                    $ git clone git@github.com:apigarage/ag-backend.git
                   </code>
                 </p>
               </div>
-            </div>
+
+              <p>
+                Laravel is using a PHP dependency manager. If you don't have it installed, use <a href="https://getcomposer.org/doc/00-intro.md">Composer's Getting Started</a> to install it.
+                Once the Compser is installed, install the code dependencies. This will take some time.
+              </p>
+              <div class="ui existing segment">
+                <p>
+                  <code class="code">
+                    $ composer install <br/>
+                    OR <br/>
+                    $ /usr/local/bin/composer.phar install
+                  </code>
+                </p>
+              </div>
+
+              <p>
+                Next is to setup the database configuration for the application. Create a new file on the root directory named <code> .env.local.php </code>.
+                Below is an example of what it will look like.
+              </p>
+              <div class="ui existing segment">
+                <p>
+                  <code class="code">
+                    <?php <br/>
+                    <br/>
+                    return array( <br/>
+                    /* Database */
+                    <br/>    'db_type' => '_______',
+                    <br/>    'db_host' => '_______',
+                    <br/>    'db_name' => '_______',
+                    <br/>    'db_username' => '_______',
+                    <br/>    'db_password' => '_______',
+                  </code>
+                </p>
+              </div>
+
+              <p>
+                API Garage sends an email when user adds a comment to an endpoint. It's using Mailgun to send emails.
+                You can sign up for free mailgunn acountnt aand generate the keys for setup. Add the config below to
+                the <code>.env.local.php</code> file.
+              </p>
+              <div class="ui existing segment">
+                <p>
+                  <code class="code">
+                    <?php <br/>
+                    ...
+                    <br/>
+                    <br/>
+
+                    /* mailgun */
+                    <br/>    'mailgun_domain' => '_________',
+                    <br/>    'mailgun_secret' => 'key-_________',
+                    <br/>  );
+                    <br/>
+                  </code>
+                </p>
+              </div>
+
           </div>
+
         </div>
         <br/>
         <div id="frontend">
           <h2 class="ui dividing header">Setting up Fronend</h2>
-          <h3 class="ui header">Setting Up LAMP Stack</h3>
+          <p>
+            API Garage is a desktop application created in Electron. It's purpose is to generate live documentation for teams to collaborate on during the development process.
+          </p>
+
+          <p>
+            Two main requirements for the projects are node and bower. You can install node from <a href="https://nodejs.org/en/download/"> node website.
+            You can install bower from <a href="http://bower.io/#install-bower">bower website</a>.
+          </p>
+
+          <h3>Setup the code</h3>
+          <div>
+            <p>
+              Clone the repository.
+            </p>
+            <div class="ui existing segment">
+              <p>
+                <code class="code">
+                  $ git@github.com:apigarage/ag-frontend.git
+                </code>
+              </p>
+            </div>
+
+            <p>
+              Install node and bower dependencies.
+            </p>
+            <div class="ui existing segment">
+              <p>
+                <code class="code">
+                  $ cd ag-frontend <br/>
+                  $ npm install <br/>
+                  $ cd browser/app <br/>
+                  $ bower install
+                </code>
+              </p>
+            </div>
+
+            <p>
+              Inside the config folder create a config file based on the that will be building against filename has to be called env_.json.
+            </p>
+            <p>
+              Create a <code>env_development.json</code> with the contents below.
+            </p>
+            <div class="ui existing segment">
+              <p>
+                <code class="code">
+                  { <br/>
+                    "name": "development", <br/>
+                    "description": "Add here any environment specific stuff you like.", <br/>
+                    "url": "<>", <br/>
+                    "api": "api/", <br/>
+                    "client_id": "id_<>", <br/>
+                    "client_secret": "secret_<>", <br/>
+                    "database_name": "staging-apigarage", <br/>
+                    "access_token_key": "accessToken_staging", <br/>
+                    "manifest_file_url": "", <br/>
+                    "mixpanel_key": "", <br/>
+                    "update_check_interval": 60000, <br/>
+                    "syncTime": 10000 <br/>
+                  }
+                </code>
+              </p>
+            </div>
+
+            <p>
+              The project is ready to go. Run the command below to start application
+            </p>
+            <div class="ui existing segment">
+              <p>
+                <code class="code">
+                  npm start
+                </code>
+              </p>
+            </div>
+          </div>
+
+          <p>
+            If you want to build an installer from the frontend client, details can be found
+            at <a href="https://github.com/apigarage/ag-frontend#proposed-deployment-flow"> the proposed deployment flow </a>.
+            Currently the deployment script supports all three major operating systems linux, windows, and osx.
+          </p>
         </div>
+
+        <br/> <br/> <br/> <br/>
       </div>
 
     </div>
