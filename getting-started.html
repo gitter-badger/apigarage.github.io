@@ -120,8 +120,8 @@
             <h2 class="logo-text" href="/">API Garage</h2>
           </div>
           <div class="right item">
-            <a class="item" href="/getting-started.html">Getting Started</a>
-            <a class="active item" href="/features.html">Features</a>
+            <a class="active item" href="/getting-started.html">Getting Started</a>
+            <a class="item" href="/features.html">Features</a>
             <a class="item" href="http://github.com">Github</a>
             <a class="ui inverted button">Donate</a>
           </div>
@@ -129,294 +129,98 @@
       </div>
   </div>
 
+  <div>
+    <div class="main ui intro container">
+      <div class="no example">
+        <h1 class="ui header">Setting Up</h1>
 
-  <br/>
-  <div class="ui vertical stripe segment">
+        <p>
+          API Garage is a two part software: 1) Backend for persisting the information and 2) a cross platform
+          frontend application.
+        </p>
+
+        <div id="backend">
+          <h2 class="ui dividing header">Setting up Backend</h2>
+          <div class="ui container">
+            <h3 class="ui header">Setting Up LAMP Stack</h3>
 
             <div>
-                <h2>
-                    <a id="Setup_LAMP_Stack_1"></a>Setup LAMP Stack
-
-                </h2>
-                <p>Tasksel is a LAMP stack utility to install PHP, MySQL, and Apache. We won’t need it for automated deployment.</p>
-                <pre>
-                    <code>$ sudo apt-get
-
-                        <span>
-                            <span>install</span> tasksel
-$ sudo  tasksel #
-
-                            <span>Select</span> MySQL, PHP,
-
-                            <span>and</span> Apache
-
-                            <span>for</span> installation.
-
-
-                        </span>
-                    </code>
-                </pre>
-                <p>Don’t forget to restart the server.</p>
-                <pre>
-                    <code>
-                        <span>$ </span>sudo /etc/init.d/apache2 restart
-
-
-                    </code>
-                </pre>
-                <p>PhpMySQL is easy for database management. It’s optional for development. Definitely not installed on the production.
-Go to
-
-                    <a href="http://localhost/phpmyadmin">http://localhost/phpmyadmin</a> to test PHPMyAdmin.
-
+              <p>
+                Easiest way to setup a LAMP stack is to use <code>Tasksel</code>. Tasksel is a LAMP stack utility to install PHP, MySQL, and Apache.
+                Once we have a docker container for API Garage.
+              </p>
+              <div class="ui existing segment">
+                <p>
+                  <code class="code">
+                    $ sudo apt-get install tasksel </br>
+                    $ sudo  tasksel # Select MySQL, PHP, and Apache for installation.
+                  </code>
                 </p>
-                <pre>
-                    <code>$ sudo  apt-get
-
-                        <span>
-                            <span>install</span>  phpmyadmin
-$ sudo
-
-                            <span>ln</span> -s /usr/
-
-                            <span>share</span>/phpmyadmin /
-
-                            <span>var</span>/www
-
-
-                        </span>
-                    </code>
-                </pre>
-                <h2>
-                    <a id="Create_A_Database__A_User_21"></a>Create A Database &amp; A User
-
-                </h2>
-                <p>Log into the MySQL.</p>
-                <pre>
-                    <code>#
-
-                        <span>
-                            <span>Use</span> the
-
-                            <span>password</span> that you used
-
-                            <span>while</span> installing MySQL (During TaskSel)
-$ mysql -u root -
-
-                            <span>p</span>
-                        </span>
-                    </code>
-                </pre>
-                <p>Setup a database and a user.</p>
-                <pre>
-                    <code>#
-
-                        <span>
-                            <span>Create</span> a
-
-                            <span>database</span>
-                            <span>CREATE</span>
-                            <span>DATABASE</span> &lt;
-
-                            <span>database</span>-
-
-                            <span>name</span>&gt;;
-
-                        </span>
-
-#
-
-                        <span>
-                            <span>Create</span> a
-
-                            <span>new</span>
-                            <span>user</span>
-                            <span>CREATE</span>
-                            <span>USER</span>
-                            <span>'&lt;db-username&gt;'</span>@
-
-                            <span>'localhost'</span>
-                            <span>IDENTIFIED</span>
-                            <span>BY</span>
-                            <span>'&lt;db-user-password&gt;'</span>;
-
-                        </span>
-
-#
-
-                        <span>
-                            <span>Grant</span>
-                            <span>privileges</span>
-                            <span>to</span> the
-
-                            <span>user</span>
-                            <span>GRANT</span> ALL
-
-                            <span>PRIVILEGES</span>
-                            <span>ON</span> *.*
-
-                            <span>TO</span>
-                            <span>'&lt;db-username&gt;'</span>@
-
-                            <span>'localhost'</span>
-                            <span>WITH</span>
-                            <span>GRANT</span>
-                            <span>OPTION</span>;
-
-                        </span>
-                    </code>
-                </pre>
-                <h2>
-                    <a id="Backend_Code_42"></a>Backend Code
-
-                </h2>
-                <h3>
-                    <a id="Install_Composer_44"></a>Install Composer
-
-                </h3>
-                <p>PHP Composer is used to manage PHP packages. It’s similar to npm for node.</p>
-                <pre>
-                    <code>
-                        <span># Install Composer</span>
-                        <span>$ </span>curl -s
-
-                        <span>http:</span>/
-
-                        <span>/getcomposer.org/installer</span> | php
-
-
-                        <span>$ </span>sudo mv composer.phar /usr/local/bin/composer.phar
-
-
-
-                    </code>
-                </pre>
-                <p>And if you’re even more lazy, like me, you can create an alias:</p>
-                <pre>
-                    <code>
-                        <span>$ </span>
-                        <span>alias</span> composer=
-
-                        <span>'/usr/local/bin/composer.phar'</span>
-                    </code>
-                </pre>
-                <h2>
-                    <a id="Get_the_code_58"></a>Get the code
-
-                </h2>
-                <p>Clone the backend repository from Bitbucket.</p>
-                <pre>
-                    <code>git clone git@bitbucket
-
-                        <span:chinmaypatel/apigarage-backend
-
-                        <span
-                    </code>
-                </pre>
-                <h3>
-                    <a id="Get_Composer_Packages_64"></a>Get Composer Packages
-
-                </h3>
-                <p>Go inside the directory and install php packages.</p>
-                <pre>
-                    <code>
-                        <span># Go inside the repository folder</span>
-$ cd apigarage-backend
-
-
-
-                        <span># Install packages</span>
-$ composer
-
-                        <span>install</span>
-                        <span>OR</span>
-$ /usr/local/bin/composer.phar
-
-                        <span>install</span>
-                    </code>
-                </pre>
-                <h3>
-                    <a id="Setup_Settings_File_77"></a>Setup Settings File
-
-                </h3>
-                <p>Add the local config file named .env.local.php</p>
-                <pre>
-                    <code>
-                        <spanpan>&lt;?php</span>
-                            <span>return</span>
-                            <span>array</span>(
-
-
-                            <span>/* Database */</span>
-                            <span>'db_type'</span> =&gt;
-
-                            <span>'_______'</span>,
-
-
-                            <span>'db_host'</span> =&gt;
-
-                            <span>'_______'</span>,
-
-
-                            <span>'db_name'</span> =&gt;
-
-                            <span>'_______'</span>,
-
-
-                            <span>'db_username'</span> =&gt;
-
-                            <span>'_______'</span>,
-
-
-                            <span>'db_password'</span> =&gt;
-
-                            <span>'_______'</span>,
-
-
-
-                            <span>/* mailgun */</span>
-                            <span>'mailgun_domain'</span> =&gt;
-
-                            <span>'andbox196ff6aea54948fc9be5564c7d67c22d.mailgun.org'</span>,
-
-
-                            <span>'mailgun_secret'</span> =&gt;
-
-                            <span>'key-b2ff544ae437400a5343d1e83c73d41a'</span>,
-);
-
-
-                        </span>
-                    </code>
-                </pre>
-                <h3>
-                    <a id="Run_Migrations__Run_Seed_96"></a>Run Migrations &amp; Run Seed
-
-                </h3>
-                <pre>
-                    <code>
-                        <span>$ </span>php artisan migrate
-
-                        <span># Installs all the tables</span>
-                        <span>$ </span>php artisan
-
-                        <span>db:</span>seed
-
-                        <span># Pre-populate some data for the application</span>
-                    </code>
-                </pre>
-                <h2>
-                    <a id="Verify_Application_102"></a>Verify Application
-
-                </h2>
-                <pre>
-                    <code>
-                        <span>php</span> artisan serve
-
-
-                    </code>
-                </pre>
+              </div>
             </div>
+
+            <div>
+              <p>
+                Login to MySQL.
+              </p>
+              <div class="ui existing segment">
+                <p>
+                  <code class="ui code">
+                    $ mysql -u root -p # Use the password created while setting up Tasksel
+                  </code>
+                </p>
+              </div>
+
+            </div>
+
+            <div>
+              <p>
+                Setup a database and a user.
+              </p>
+              <div class="ui existing segment">
+                <p>
+                  <code class="code">
+                    # Create a database <br/>
+                    CREATE DATABASE <database-name>; <br/> <br/>
+
+                    # Create a new user  <br/>
+                    CREATE USER '<db-username>'@'localhost' <br/>
+                    IDENTIFIED BY '<db-user-password>'; <br/>
+
+                    # Grant privileges to the user <br/>
+                    GRANT ALL PRIVILEGES ON *.* TO '<db-username>'@'localhost' <br/>
+                    WITH GRANT OPTION; <br/>
+                  </code>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="ui container">
+            <h3 class="ui header">Clone Backend Repository</h3>
+
+            <div>
+              <p>
+                Clone the public repository.
+              </p>
+              <div class="ui existing segment">
+                <p>
+                  <code class="code">
+                    $ sudo apt-get install tasksel </br>
+                    $ sudo  tasksel # Select MySQL, PHP, and Apache for installation.
+                  </code>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br/>
+        <div id="frontend">
+          <h2 class="ui dividing header">Setting up Fronend</h2>
+          <h3 class="ui header">Setting Up LAMP Stack</h3>
+        </div>
+      </div>
+
+    </div>
 
   </div>
 
@@ -428,7 +232,6 @@ $ /usr/local/bin/composer.phar
             <!-- <h4 class="ui inverted header">About</h4> -->
             <div class="ui inverted link list">
               <!-- <a href="#" class="item">Sitemap</a> -->
-              <!--TODO make this open up an email client so user can email API Garage  -->
               <a href="mailto:info@apigarage.com" class="item">Contact Us</a>
             </div>
           </div>
