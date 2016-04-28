@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+{% include head.html %}
+<body class="header-fixed">
+  <div class="wrapper">
+    {% include header.html %}
+
+    {{ content }}
+
+    {% include footer.html %}
+  </div>
+  {% include footer-js.html %}
+</body>
+</html>
